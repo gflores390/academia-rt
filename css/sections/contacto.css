@@ -1,0 +1,201 @@
+/* Contacto: High-impact close e información del club */
+.contacto {
+  color: var(--on-navy);
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-night) 100%);
+  padding-block: clamp(60px, 8vw, 110px);
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: clamp(36px, 6vw, 80px);
+  align-items: center;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.contacto-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contacto-badge-dash {
+  display: inline-block;
+  width: 42px;
+  height: 5px;
+  background: var(--yellow);
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+.contacto h2 {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: .95;
+  color: #ffffff;
+}
+.contacto-copy p {
+  margin: 20px 0 32px;
+  font-size: var(--step-1);
+  line-height: 1.5;
+  max-width: 40ch;
+  color: var(--on-navy-soft);
+}
+
+/* Contact info cards */
+.datos {
+  display: grid;
+  gap: 16px;
+}
+.dato-card {
+  padding: 22px 26px;
+  background: rgba(1, 15, 44, .7);
+  border-radius: 14px;
+  border: 1px dashed rgba(220, 181, 42, .35);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition: transform .3s var(--ease-out), border-color .3s;
+}
+.dato-card:hover {
+  transform: translateX(4px);
+  border-color: var(--yellow);
+}
+.dato-card dt {
+  font-family: var(--font-mono);
+  font-size: .88rem;
+  letter-spacing: .08em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.dato-card dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--on-navy);
+}
+.contacto .pending-tag {
+  color: var(--yellow);
+  border-color: rgba(254, 217, 6, .5);
+  background: rgba(254, 217, 6, .1);
+  font-size: .78rem;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+/* ═══════════════════════════════════════════════
+   CTA BANNER (Inspirado en Imagen 2 - ¿Listo para ser parte...?)
+   ═══════════════════════════════════════════════ */
+.cta-banner-strip {
+  background: linear-gradient(135deg, #022866 0%, #011438 100%);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  padding: clamp(28px, 4vw, 40px) clamp(24px, 4vw, 44px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 36px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, .5);
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner-strip::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--yellow);
+}
+
+.cta-banner-copy {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cta-banner-texts h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: .02em;
+}
+.cta-banner-texts p {
+  font-size: .95rem;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+.cta-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* Social links icons */
+.social-links-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.social-label {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--on-navy-soft);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s var(--ease-out), background .25s, color .25s, border-color .25s;
+}
+.social-icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.social-icon-btn:hover {
+  transform: translateY(-3px);
+  background: var(--yellow);
+  color: var(--navy-night);
+  border-color: var(--yellow);
+}
+
+@media (max-width: 960px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-banner-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 560px) {
+  .contacto .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .cta-banner-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

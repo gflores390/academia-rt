@@ -1,0 +1,1177 @@
+/* =========================================================
+   LA ESCUELA
+   Diseño premium — Academia de Fútbol
+========================================================= */
+
+.escuela {
+  padding-block: clamp(25px, 3.5vw, 45px); /* Reducido a la mitad */
+  background: var(--navy-night) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   1. ENCABEZADO — TRES PILARES
+========================================================= */
+
+.pillars-header {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto 48px;
+  padding-top: 12px;
+  text-align: center;
+}
+
+.pillars-heading {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: .02em;
+  color: #ffffff !important;
+}
+
+.pillars-heading span {
+  color: #FFE600;
+}
+
+.pillars-intro {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+
+  font-family: var(--font-body);
+  font-size: .96rem;
+  line-height: 1.65;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   THREE PILLARS STRIP
+========================================================= */
+
+.pillars-strip {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  background: transparent;
+  padding: 8px 20px 25px;
+}
+
+
+/* =========================================================
+   CADA PILAR
+========================================================= */
+
+.pillar-col {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 420px;
+  transition: transform .35s var(--ease-out);
+}
+
+.pillar-col:hover {
+  transform: translateY(-4px);
+}
+
+
+
+
+
+.pillar-bg-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.pillar-bg-wrap::after { display: none; }
+
+.pillar-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pillar-content-overlay {
+  padding: 30px 24px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+
+/* =========================================================
+   ICONO HEXAGONAL
+========================================================= */
+
+.pillar-icon-wrap {
+  position: relative;
+  width: 76px;
+  height: 86px;
+  margin: 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-hex {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: #00163B;
+  stroke: #ffffff;
+  stroke-width: 4px;
+}
+
+.card-blue .pillar-hex { stroke: #0066ff; }
+.card-yellow .pillar-hex { stroke: #ffcc00; }
+.card-red .pillar-hex { stroke: #ff0033; }
+
+.pillar-symbol {
+  position: relative;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.pillar-symbol svg {
+  width: 29px;
+  height: 29px;
+
+  stroke-width: 2.2;
+}
+
+
+/* =========================================================
+   TÍTULO DEL PILAR
+========================================================= */
+
+.pillar-title {
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #ffffff !important;
+  margin: 0 0 8px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PALABRAS CLAVE
+========================================================= */
+
+.pillar-keywords {
+  font-family: var(--font-body);
+  color: #ffcc00;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.pillar-desc {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* =========================================================
+   DIVISORES
+========================================================= */
+
+.pillar-divider {
+  width: 1px;
+
+  margin: 12px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(2, 40, 102, .14) 18%,
+      rgba(2, 40, 102, .14) 82%,
+      transparent 100%
+    );
+}
+
+
+/* =========================================================
+   2. FEATURE BANNER
+   ENTRENAMOS PARA COMPETIR
+========================================================= */
+
+.escuela-feature {
+  position: relative;
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  margin-block: 25px clamp(55px, 7vw, 90px);
+
+  padding-block: clamp(50px, 7vw, 92px);
+
+  isolation: isolate;
+
+  border-top: 4px solid #fed906;
+
+  background:
+    radial-gradient(
+      ellipse 50% 80% at 85% 50%,
+      rgba(14, 82, 194, .55) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      100deg,
+      rgba(1, 10, 32, .97) 0%,
+      rgba(1, 20, 56, .92) 45%,
+      rgba(2, 40, 102, .70) 100%
+    ),
+    url("assets/img/coach_training.jpg") center / cover no-repeat;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .15),
+    0 20px 40px -15px rgba(0, 0, 0, .35);
+}
+
+
+/* Decoración diagonal */
+
+.escuela-feature::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      -55deg,
+      rgba(230, 30, 45, .14) 0 3px,
+      transparent 3px 44px
+    ),
+    repeating-linear-gradient(
+      -55deg,
+      rgba(255, 255, 255, .035) 0 2px,
+      transparent 2px 22px
+    );
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+.escuela-feature::after {
+  content: "";
+
+  position: absolute;
+
+  left: -6%;
+  bottom: -40px;
+
+  width: 38%;
+  height: 120px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(230, 30, 45, .38),
+      transparent
+    );
+
+  border-top: 3px solid rgba(254, 217, 6, .55);
+
+  transform: skewX(-24deg);
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* =========================================================
+   CONTENIDO DEL FEATURE
+========================================================= */
+
+.escuela-feature-inner {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 1.15fr);
+
+  gap: clamp(35px, 5vw, 70px);
+
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+.feature-badge-dash {
+  display: inline-block;
+
+  width: 42px;
+  height: 5px;
+
+  margin-bottom: 15px;
+
+  background: #fed906;
+
+  border-radius: 3px;
+}
+
+
+/* =========================================================
+   TÍTULO FEATURE
+========================================================= */
+
+.escuela-feature-title {
+  margin: 0 0 17px;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+
+  font-weight: 800;
+
+  line-height: .95;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  letter-spacing: -.01em;
+
+  text-shadow:
+    0 3px 0 rgba(190, 20, 35, .75),
+    0 8px 28px rgba(0, 0, 0, .55);
+}
+
+
+.highlight-yellow {
+  display: block;
+
+  color: #fed906;
+
+  text-shadow:
+    0 3px 0 rgba(190, 20, 35, .8),
+    0 8px 28px rgba(230, 30, 45, .45);
+}
+
+
+.highlight-navy {
+  color: #022866;
+}
+
+
+/* =========================================================
+   TEXTOS FEATURE
+========================================================= */
+
+.escuela-feature-lead {
+  margin-bottom: 14px;
+
+  font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: #ffffff;
+}
+
+
+.escuela-feature-sub {
+  max-width: 46ch;
+
+  margin-bottom: 28px;
+
+  font-size: .96rem;
+
+  line-height: 1.6;
+
+  color: #d3e0f7;
+}
+
+
+/* =========================================================
+   BOTÓN METODOLOGÍA
+========================================================= */
+
+.btn-methodology {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 26px 12px 16px;
+
+  background: #fed906;
+
+  color: #010f2c;
+
+  font-family: var(--font-body);
+
+  font-size: .96rem;
+  font-weight: 800;
+
+  border-radius: 50px;
+
+  box-shadow:
+    0 8px 24px -4px rgba(254, 217, 6, .4),
+    0 2px 6px rgba(0, 0, 0, .2);
+
+  transition:
+    transform .3s var(--ease-out),
+    box-shadow .3s var(--ease-out),
+    background .2s;
+
+  text-transform: none;
+}
+
+
+.btn-methodology:hover {
+  transform: translateY(-2px) scale(1.02);
+
+  background: #ffe338;
+
+  box-shadow:
+    0 12px 28px -4px rgba(254, 217, 6, .55),
+    0 4px 10px rgba(0, 0, 0, .3);
+}
+
+
+.btn-methodology-icon {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #011438;
+
+  color: #fed906;
+
+  border-radius: 50%;
+}
+
+
+.btn-methodology-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* =========================================================
+   IMAGEN FEATURE
+========================================================= */
+
+.escuela-feature-media {
+  position: relative;
+  min-width: 0;
+}
+
+
+.media-angled-frame {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 24px 50px -15px rgba(0, 0, 0, .6),
+    0 0 0 1px rgba(255, 255, 255, .15);
+
+  transform:
+    perspective(1000px)
+    rotateY(-2deg);
+
+  transition:
+    transform .45s var(--ease-out),
+    box-shadow .45s var(--ease-out);
+}
+
+
+.media-angled-frame:hover {
+  transform:
+    perspective(1000px)
+    rotateY(0deg)
+    scale(1.01);
+
+  box-shadow:
+    0 28px 60px -15px rgba(0, 0, 0, .75),
+    0 0 0 2px rgba(254, 217, 6, .4);
+}
+
+
+.media-angled-frame img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9.5;
+
+  object-fit: cover;
+}
+
+
+/* Badge imagen */
+
+.media-badge {
+  position: absolute;
+
+  left: 14px;
+  bottom: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 14px;
+
+  background: rgba(1, 15, 44, .88);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, .2);
+
+  border-radius: 50px;
+
+  font-family: var(--font-mono);
+
+  font-size: .78rem;
+
+  color: #ffffff;
+}
+
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  background: #fed906;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 8px #fed906;
+}
+
+
+/* =========================================================
+   3. CATEGORÍAS
+========================================================= */
+
+.categorias-wrap {
+  width: 100%;
+
+  margin-top: 10px;
+
+  margin-bottom: clamp(60px, 8vw, 100px);
+}
+
+
+.categorias-head {
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+
+.categorias-title {
+  margin: 0 0 8px;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+
+  font-weight: 800;
+
+  color: #011844;
+
+  line-height: .95;
+
+  letter-spacing: -.01em;
+}
+
+
+.categorias-sub {
+  max-width: 48ch;
+
+  margin: 0;
+
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+
+  line-height: 1.55;
+
+  color: #4a5b78;
+}
+
+
+/* =========================================================
+   GRID CATEGORÍAS
+========================================================= */
+
+.categorias-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(20px, 2.5vw, 32px);
+}
+
+
+/* =========================================================
+   CARD CATEGORÍA
+========================================================= */
+
+.cat-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #011438;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 12px 30px -10px rgba(1, 24, 68, .25);
+
+  cursor: pointer;
+
+  transition:
+    transform .35s var(--ease-out),
+    box-shadow .35s var(--ease-out);
+}
+
+
+.cat-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 22px 40px -12px rgba(1, 24, 68, .4),
+    0 0 0 2px #fed906;
+}
+
+
+/* Imagen */
+
+.cat-card-media {
+  position: relative;
+
+  aspect-ratio: 4 / 3.2;
+
+  overflow: hidden;
+
+  background: #010f2c;
+}
+
+
+.cat-card-media img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform .55s var(--ease-out);
+}
+
+
+.cat-card:hover .cat-card-media img {
+  transform: scale(1.06);
+}
+
+
+.cat-card-media::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 40%,
+      rgba(1, 20, 56, .85) 100%
+    );
+}
+
+
+/* =========================================================
+   FOOTER CARD
+========================================================= */
+
+.cat-card-footer {
+  min-height: 82px;
+
+  padding: 18px 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  background: #011438;
+
+  border-top: 2px solid rgba(254, 217, 6, .35);
+
+  transition: border-color .3s;
+}
+
+
+.cat-card:hover .cat-card-footer {
+  border-top-color: #fed906;
+}
+
+
+/* Categoría */
+
+.cat-tag {
+  margin-bottom: 4px;
+
+  font-family: var(--font-display);
+
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  color: #fed906;
+
+  line-height: 1;
+
+  letter-spacing: .02em;
+}
+
+
+.cat-desc {
+  font-family: var(--font-body);
+
+  font-size: .94rem;
+
+  color: #e2ebfb;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* Flecha */
+
+.cat-arrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, .1);
+
+  color: #fed906;
+
+  transition:
+    transform .35s var(--ease-out),
+    background .3s,
+    color .3s;
+}
+
+
+.cat-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+.cat-card:hover .cat-arrow {
+  transform: translateX(4px);
+
+  background: #fed906;
+
+  color: #010f2c;
+}
+
+
+/* =========================================================
+   4. TURF SLOGAN
+========================================================= */
+
+.turf-slogan-banner {
+  position: relative;
+
+  min-height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  margin-top: 20px;
+
+  border-top: 4px solid #fed906;
+
+  box-shadow:
+    0 16px 36px -10px rgba(0, 0, 0, .4);
+}
+
+
+.turf-slogan-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center bottom;
+
+  filter:
+    brightness(.8)
+    contrast(1.1);
+}
+
+
+.turf-slogan-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(1, 20, 56, .45) 0%,
+      rgba(1, 15, 44, .85) 100%
+    );
+}
+
+
+.turf-slogan-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 30px var(--gutter);
+
+  text-align: center;
+}
+
+
+.turf-slogan-text {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 2px;
+
+  margin-inline: auto;
+}
+
+
+.turf-slogan-top {
+  font-family: var(--font-display);
+
+  font-size: clamp(1.4rem, 2.8vw, 2.6rem);
+
+  font-style: italic;
+
+  font-weight: 800;
+
+  letter-spacing: .06em;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 14px rgba(0, 0, 0, .8),
+    0 1px 3px rgba(0, 0, 0, .9);
+}
+
+
+.turf-slogan-accent {
+  font-family: var(--font-display);
+
+  font-size: clamp(1.8rem, 4vw, 3.8rem);
+
+  font-style: italic;
+
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  color: #fed906;
+
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, .85),
+    0 0 30px rgba(254, 217, 6, .4);
+}
+
+
+/* =========================================================
+   5. TABLET
+========================================================= */
+
+@media (max-width: 960px) {
+
+  /* PILARES */
+
+  .pillars-strip {
+    grid-template-columns: 1fr;
+    gap: 34px;
+
+    padding-bottom: 10px;
+  }
+
+  .pillar-divider {
+    width: 90px;
+    height: 1px;
+
+    margin: 0 auto;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(2, 40, 102, .18),
+        transparent
+      );
+  }
+
+  .pillar-col {
+    padding: 0 20px;
+  }
+
+
+  /* FEATURE */
+
+  .escuela-feature-inner {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+  .escuela-feature-media {
+    max-width: 800px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+
+  /* CATEGORÍAS */
+
+  .categorias-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   6. MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .escuela {
+    padding-bottom: 55px;
+  }
+
+
+  /* HEADER */
+
+  .pillars-header {
+    margin-bottom: 38px;
+    padding-inline: 15px;
+  }
+
+  .pillars-heading {
+    font-size: 1.8rem;
+  }
+
+  .pillars-intro {
+    font-size: .9rem;
+  }
+
+
+  /* PILARES */
+
+  .pillars-strip {
+    gap: 30px;
+  }
+
+  .pillar-col {
+    padding: 0 15px;
+  }
+
+  .pillar-icon-wrap {
+    width: 76px;
+    height: 87px;
+  }
+
+  .pillar-title {
+    font-size: 1.7rem;
+  }
+
+  .pillar-keywords {
+    font-size: .76rem;
+  }
+
+  .pillar-desc {
+    font-size: .88rem;
+  }
+
+
+  /* FEATURE */
+
+  .escuela-feature {
+    margin-block: 20px 55px;
+
+    padding-block: 55px;
+  }
+
+  .escuela-feature-inner {
+    gap: 35px;
+  }
+
+  .escuela-feature-title {
+    font-size: clamp(2.3rem, 12vw, 3.4rem);
+  }
+
+  .escuela-feature-sub {
+    font-size: .9rem;
+  }
+
+
+  /* CATEGORÍAS */
+
+  .categorias-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 460px;
+
+    margin-inline: auto;
+  }
+
+  .categorias-title {
+    font-size: 2.6rem;
+  }
+
+
+  /* SLOGAN */
+
+  .turf-slogan-banner {
+    min-height: 190px;
+  }
+
+  .turf-slogan-content {
+    padding: 25px 20px;
+  }
+
+  .turf-slogan-top {
+    font-size: 1.3rem;
+  }
+
+  .turf-slogan-accent {
+    font-size: 2rem;
+  }
+
+}
+
+
+/* =========================================================
+   7. MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .pillars-heading {
+    font-size: 1.6rem;
+  }
+
+  .pillars-intro {
+    font-size: .86rem;
+  }
+
+  .pillar-title {
+    font-size: 1.55rem;
+  }
+
+  .pillar-keywords {
+    max-width: 300px;
+  }
+
+  .pillar-desc {
+    max-width: 290px;
+  }
+
+  .escuela-feature-title {
+    font-size: 2.25rem;
+  }
+
+  .cat-card-footer {
+    padding: 16px 18px;
+  }
+
+  .cat-tag {
+    font-size: 1.4rem;
+  }
+
+}
+
+/* Ocultar la regla superior (adornada en components.css) solo para esta sección */
+.escuela::before {
+  display: none !important;
+}

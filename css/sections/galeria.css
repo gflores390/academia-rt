@@ -1,0 +1,111 @@
+/* Galería: mosaic slots for real photos and video */
+.galeria {
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--navy-deep);
+  padding-block: clamp(60px, 8vw, 110px);
+}
+.galeria-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+.galeria-badge-dash {
+  display: inline-block;
+  width: 42px;
+  height: 5px;
+  background: var(--yellow);
+  border-radius: 3px;
+}
+.galeria h2 {
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  color: var(--on-navy);
+}
+
+.mosaic {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-rows: 240px 240px;
+}
+.mosaic figure {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(220, 181, 42, .4);
+  background: linear-gradient(135deg, rgba(1, 15, 44, .75), rgba(2, 40, 102, .45));
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: transform .35s var(--ease-out), border-color .35s, box-shadow .35s;
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+}
+.mosaic figure:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, .6), 0 0 20px rgba(254, 217, 6, .15);
+}
+.mosaic figure:first-child {
+  grid-row: 1 / 3;
+}
+
+.mosaic-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(254, 217, 6, .12);
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  border: 1px solid rgba(254, 217, 6, .3);
+  transition: transform .35s var(--ease-out);
+}
+.mosaic figure:hover .mosaic-icon {
+  transform: scale(1.1);
+  background: var(--yellow);
+  color: var(--navy-night);
+}
+.mosaic-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.mosaic .pending-tag {
+  font-family: var(--font-mono);
+  font-size: .84rem;
+  letter-spacing: .06em;
+  color: var(--on-navy);
+  border: 1px solid rgba(255, 255, 255, .25);
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: rgba(1, 15, 44, .6);
+}
+
+@media (max-width: 960px) {
+  .mosaic {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 280px 200px 200px;
+  }
+  .mosaic figure:first-child {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+}
+@media (max-width: 560px) {
+  .mosaic {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+  .mosaic figure {
+    min-height: 180px;
+  }
+}

@@ -1,0 +1,9 @@
+/* Text colours for the white sections (escuela, resultados) */
+.on-light h2, .on-light h3 { color: var(--navy); }
+.on-light .escuela-lead, .on-light .pruebas-head p { color: var(--ink); }
+.on-light .pillars dt { color: var(--navy); }
+.on-light .pillars dd, .on-light .expedientes p, .on-light .escuela-photo .slot p, .on-light .legend { color: var(--ink-soft); }
+.on-light .pillars > div + div { border-top-color: rgba(2, 40, 102, .16); }
+.on-light .pending { color: var(--ink-soft); }
+.on-light .pending-tag { color: var(--crimson); }
+.on-light .legend svg { color: var(--navy); }
